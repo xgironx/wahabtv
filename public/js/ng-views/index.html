@@ -1,0 +1,14 @@
+<h2>{{vm.videos.length}}  -- Videos</h2>
+
+<div class="videos">
+  <h3 data-ng-repeat="video in vm.videos">
+    <a data-ui-sref="show({name: video.name})">{{video.name}} for Emmy in {{video.order_of_play}}</a>
+  </h2>
+</div>
+
+<form ng-submit="vm.create()">
+    <input type="text" ng-model="vm.newVideo.name" placeholder="name" />
+    <input type="text" ng-model="vm.newVideo.url" placeholder="url" />
+  <input type="number" ng-model="vm.newVideo.order_of_play" placeholder="order_of_play" />
+  <button type="submit">Upload My Video</button>
+</form>
