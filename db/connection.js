@@ -11,6 +11,9 @@ var VideoSchema = new mongoose.Schema(
     ,updated_by: String
 }
 );
+
+                                                // $ mongo ds143211.mlab.com:43211/heroku_2lg0r3jz -uxgironx -pxgironx#1
+                                                // $ mongo ds143211.mlab.com:43211/heroku_2lg0r3jz -uheroku_2lg0r3jz -p pc3ovpqacvjur8c7sah0r8ehpm
         // 201705151723L   EL LUNES   GIRO
         // CHOOSES WH MONGO INSTANCE TO WRITE TO
         // JUST CHOSE TO WRITE LOCAL TO LOCAL
@@ -23,10 +26,10 @@ var VideoSchema = new mongoose.Schema(
         // WRITES TO CLOUD MLAB MONGOLAB INSTANCE
         // JUST WROTE TO CLOUD MONGOLAB INSTANCE
                                         // { "_id" : ObjectId("591a1bd6c9d9227d13b67b13"), "name" : "55555", "url" : "55555", "order_of_play" : 55555, "updated_at" : ISODate("2017-05-15T21:21:26.511Z"), "created_at" : ISODate("2017-05-15T21:21:26.511Z"), "__v" : 0 }
-                                        // rs-ds143141:PRIMARY>
+                                        // rs-ds143211:PRIMARY>
 mongoose.model("Video", VideoSchema);
         // mongoose.connect(process.env.MONGOLAB_URI)
-mongoose.connect("mongodb://heroku_st3prtwl:vqkjdi2p1vs7okint48ksvhhio@ds143141.mlab.com:43141/heroku_st3prtwl")
+mongoose.connect("mongodb://heroku_2lg0r3jz:pc3ovpqacvjur8c7sah0r8ehpm@ds143211.mlab.com:43211/heroku_2lg0r3jz")
 module.exports = mongoose;
 // --------------------------------------------------
 
