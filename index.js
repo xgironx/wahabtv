@@ -8,6 +8,7 @@ var app     = express();
 var Video = mongoose.model("Video");
 
 app.set("port", process.env.PORT || 3001);
+
 app.set("view engine", "hbs");
 app.engine(".hbs", hbs({
   extname:        ".hbs",
