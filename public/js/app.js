@@ -8,7 +8,8 @@ angular
   function Router ($stateProvider, $locationProvider, $urlRouterProvider) {
     $locationProvider.html5Mode(true)
     $stateProvider
-      .state("welcome", { url: "/",             templateUrl: "/assets/js/ng-views/welcome.html" })
+    //   .state("welcome", { url: "/",             templateUrl: "/assets/js/ng-views/welcome.html" })
+      .state("welcome", { url: "/",             templateUrl: "/assets/js/ng-views/index.html",     controller: "indexCtrl", controllerAs: "vm" })
       .state("index",   { url: "/videos",       templateUrl: "/assets/js/ng-views/index.html",     controller: "indexCtrl", controllerAs: "vm" })
       .state("show",    { url: "/videos/:name", templateUrl: "/assets/js/ng-views/show.html",      controller: "showCtrl", controllerAs: "vm" })
     $urlRouterProvider.otherwise("/")
