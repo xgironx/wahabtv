@@ -1,0 +1,15 @@
+<div ng-if="!vm.video">
+  <h2>We aint got that video!</h2>
+</div>
+
+<div ng-if="vm.video">
+  <h2>{{vm.video.name}} Video Wonder World {{vm.video.order_of_play}}!</h2>
+
+  <div class="edit-video">
+    <input     type="text"             ng-model="vm.video.name"            placeholder="name"            />
+    <input     type="text"             ng-model="vm.video.url"             placeholder="url"            />
+    <input     type="number"           ng-model="vm.video.order_of_play"   placeholder="order_of_play" />
+    <button    data-ng-click="vm.update()" >    Update Video      </button>
+    <button    data-ng-click="vm.destroy()">    Destroy Video     </button>
+  </div>
+</div>
